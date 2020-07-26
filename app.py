@@ -65,11 +65,6 @@ def create_poster():
     # Add sections to third column then add new column
     # Visualize the topics and words
     
-    lda = gensim.models.ldamodel.LdaModel.load("hist_female_LDA")
-    dictionary2 = gensim.corpora.Dictionary.load('dictionary_fHist')
-    corpus = gensim.corpora.MmCorpus("TF_IDF_fH")
-    vis = pyLDAvis.gensim.prepare(lda, corpus, dictionary2)
-    pyLDAvis.save_json(vis, "json_vis")
     my_poster.add_section(title="Interactive LDA Plot",
     	pyLDA={"filename":"full_lda_html.html", "height":"7in", "width":"12in", "caption": "Scroll over the various topics (1-20) to inspect the corresponding words including their frequency and weight. This LDA model was trained using only the history section of discharge notes for both male and female patients. Multidmensional Scaling (MDS) gives an estimate of similarity between the topics. Relevance metric can be adjusted to effect saliency and relevance."})
     my_poster.add_section(title="Findings", text="The LDA model trained on the history section of discharge notes was able to pull out more specific social determinants that were unrelated to their ICU stay, compared to the LDA trained on all available notes. When evaluating how the suicide attempt group, our validation group, matched to the topics produced by LDA model using all available notes, it can be seen that many of the patients experienced symptoms related to withdrawl, were scored using the Clinical Institute Withdrawal Assessment for Alcohol (CIWA), had mentions of various bodly ailments, and more. The LDA model trained using the history notes identified that the suicide attempt group had histories involving alcoholism, hypertension, heart disease, cancer and more. To narrow this down even further, the history LDA model was trained again after separating male and female patients. Female suicide attempt patients had histories of hypertension, drug abuse, depression and more, whilst male suicide attempt patients had histories of coronary artery disease, alcohol abuse, cirrhosis and hopelessness.")
