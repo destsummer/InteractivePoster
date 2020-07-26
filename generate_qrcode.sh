@@ -1,4 +1,4 @@
-POSTERURL=iposter-template
+dmorrow-suicide-prevention=iposter-template
 
 # Create QRCode
-python iposter/qrcode.py $dmorrow-suicide-prevention
+python iposter/qrcode.py $POSTERURL
