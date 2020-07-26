@@ -28,7 +28,7 @@ def PosterColumn(sections):
 def Header(title, authors, institutions, logo, banner_color):
     layout = dbc.Card(
     dbc.Row(
-    [dbc.Col([dbc.Row(html.Img(src=logo, style={'height':'3.5in', "width":"3.5in","padding-left":"100px"}))],width=1.5),
+    [dbc.Col(html.Img(src="hood.png", style={'height':'4in', "width":"4in"}),style={"display":"flex","justify-content":"flex-end","padding-left":"80px"},width=1.5),
      dbc.Col([dbc.Row(html.Img(src="logo1.png", style={'height':'1.75in', "width":"5in","padding-left":"50px"})),
               dbc.Row(html.Img(src="logo2.png", style={'height':'1.75in', "width":"5in", "padding-left":"50px"}))],width=1.5),
      dbc.Col([
