@@ -36,7 +36,7 @@ def Header(title, authors, institutions, logo, banner_color):
         dbc.Row(dbc.Container(authors,fluid=True)),
         dbc.Row(dbc.Container(institutions,fluid=True)),
         ],style={"padding-top":"15px"}),
-     dbc.Col(html.Img(src="qrcode.png", style={'height':'4in', "width":"4in"}),style={"display":"flex","justify-content":"flex-end","padding-right":"80px"},width=1.5)],
+     dbc.Col(html.Img(src="qrcode1.png", style={'height':'4in', "width":"4in"}),style={"display":"flex","justify-content":"flex-end","padding-right":"80px"},width=1.5)],
     style={'height':'4in', "width":"42in"},justify="center"),
     style={"background": banner_color},
     body=True)
