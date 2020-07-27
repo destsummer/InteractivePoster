@@ -33,11 +33,11 @@ def create_poster():
 
     # Instanitate an iPoster
     my_poster = iPoster(title="LDA Topic Modeling for Suicide Prevention", # Title of your poster
-                        authors_dict={"Destinee Morrow" : "Hood College", # Authors in {student, mentors, PI} order
-                                      "Rafael Zamora-Resendiz" : "Lawrence Berkeley National Laboratory",
-                                      "Shirley Wang" : "Lawrence Berkeley National Laboratory",
-                                      "Xinlian Liu" : "Hood College",
-                                      "Silvia Crivelli" : "Lawrence Berkeley National Laboratory"},
+                        authors_dict={"Destinee Morrow" : ["Hood College", "Lawrence Berkeley National Laboratory"], # Authors in {student, mentors, PI} order
+                                      "Rafael Zamora-Resendiz" : ["Lawrence Berkeley National Laboratory"],
+                                      "Shirley Wang" : ["Lawrence Berkeley National Laboratory"],
+                                      "Xinlian Liu" : ["Hood College", "Lawrence Berkeley National Laboratory"],
+                                      "Silvia Crivelli" : ["Lawrence Berkeley National Laboratory"]},
                         logo = "hood.png", # Home institution logo
                         banner_color=colors.DOE_GREEN, # Color of banner header; colors has preset colors
                         text_color=colors.WHITE)
