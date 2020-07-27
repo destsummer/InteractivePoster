@@ -70,24 +70,23 @@ class iPoster:
 
     #--
     def _header_components(self):
-        index_dict = dict([(x[1], x[0]+1) for x in enumerate(set(reversed(list(self.authors.values()))))])
-        print(index_dict)
-        authors = []
-        for a in self.authors:
-            authors += [a]
-            authors += [html.Sup(index_dict[self.authors[a]])]
-            authors += [", "]
-        authors = authors[:-1]
-        insts = []
-        for s in index_dict:
-            insts += [html.Sup(index_dict[s])]
-            insts += [s]
-            insts += [", "]
-        insts = insts[:-1]
-        title = html.H1(self.poster_title, style={"text-align":"center","font-size":"89px","color":self.text_color, "font-family": "Arial", "font-weight":"bold"})
-        authors = html.H2(authors,style={"text-align":"center","font-size":"59px","color":self.text_color,"font-family": "Arial", "font-weight":"bold"})
-        institutions = html.H3(insts, style={"text-align":"center","font-size":"48px","color":self.text_color, "font-family": "Arial", "font-weight":"bold"})
-        return title, authors, institutions
+    	index_dict = dict([(x[1], x[0]+1) for x in enumerate(set(reversed(sum(list(self.authors.values()), []))))])
+    	authors = []
+    	for a in self.authors:
+        	authors += [a]
+        	authors += [html.Sup(",".join([str(index_dict[x]) for x in self.authors[a]]))]
+        	authors += [", "]
+    	authors = authors[:-1]
+    	insts = []
+    	for s in index_dict:
+        	insts += [html.Sup(index_dict[s])]
+        	insts += [s]
+        	insts += [", "]
+    	insts = insts[:-1]
+    	title = html.H1(self.poster_title, style={"text-align":"center","font-size":"89px","color":self.text_color, "font-family": "Arial", "font-weight":"bold"})
+    	authors = html.H2(authors,style={"text-align":"center","font-size":"59px","color":self.text_color, "font-family": "Arial", "font-weight":"bold"})
+    	institutions = html.H3(insts, style={"text-align":"center","font-size":"48px","color":self.text_color, "font-family": "Arial", "font-weight":"bold"})
+    	return title, authors, institutions
 
     #--
     def add_section(self, title, text=None, ref=None, img0=None, img1=None, img2=None, img3=None, plot=None, pyLDA=None, color="#2f608b", height=None, children=[]):
