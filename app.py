@@ -66,11 +66,11 @@ def create_poster():
 
     # Add sections to third column then add new column
     # Visualize the topics and words
-    my_poster.add_section(title="Current Work",
-        text="Clever is an adaptive clinical concept extractor. This method does not require any training and is broken down into three simple steps seen below. Clever can be used with any kind of unstructed text and lexicon.",
-        img3={"filename":"clever_flow.png", "height":"5.25in", "width":"10in", "caption":""}) 
-    my_poster.add_section(title="Clever Output",
-        img4={"filename":"clever_output.png", "height":"5.25in", "width":"10in", "caption":""})
+    #my_poster.add_section(title="Current Work",
+        #text="Clever is an adaptive clinical concept extractor. This method does not require any training and is broken down into three simple steps seen below. Clever can be used with any kind of unstructed text and lexicon.",
+        #img3={"filename":"clever_flow.png", "height":"5.25in", "width":"10in", "caption":""}) 
+    #my_poster.add_section(title="Clever Output",
+        #img4={"filename":"clever_output.png", "height":"5.25in", "width":"10in", "caption":""})
     my_poster.add_section(title="Conclusion", text="NLP allows for the extraction of concepts and topics that are hidden within EHR free text data. These LDA models were successful at identifying topics related to diagnosis, procedures, routines and more. They were also successful at identifying socio-economic determinants like drug abuse. Using these results, future implementation on the CDW of the VA can identify those who are at higher risk of suicide. Current development and refining, including the use of a NLP tool called Clever on the VA database, is ongoing.")
     my_poster.add_section(title="Acknowledgments", text="This work was supported in part by the U.S. Department of Energy, Computational Research Division (CRD) of the Berkeley National Lab, and VA Million Veteran Program (MVP). Thank you again to Dr. Liu, Dr. Crivelli, Rafael, and Shirley. Thank you to Dr. Suzanne Tamang at Oak Ridge National Lab for sharing her clinical concept extractor, Clever.") 
     my_poster.next_column()
