@@ -33,12 +33,12 @@ def create_poster():
 
     # Instanitate an iPoster
     my_poster = iPoster(title="LDA Topic Modeling for Suicide Prevention", # Title of your poster
-                        authors_dict={"Destinee Morrow" : ["Hood College", "Lawrence Berkeley National Laboratory"], # Authors in {student, mentors, PI} order
+                        authors_dict={"Destinee Morrow" : ["Lawrence Berkeley National Laboratory"], # Authors in {student, mentors, PI} order
                                       "Rafael Zamora-Resendiz" : ["Lawrence Berkeley National Laboratory"],
                                       "Xiange Wang" : ["Lawrence Berkeley National Laboratory"],
                                       "Xinlian Liu" : ["Hood College", "Lawrence Berkeley National Laboratory"],
                                       "Silvia Crivelli" : ["Lawrence Berkeley National Laboratory"]},
-                        logo = "hood.png", # Home institution logo
+                        #logo = "hood.png", # Home institution logo
                         banner_color=colors.DOE_GREEN, # Color of banner header; colors has preset colors
                         text_color=colors.WHITE)
 
@@ -58,8 +58,8 @@ def create_poster():
     # Add sections to second column then add new column
     my_poster.add_section(title="Interactive Figures",
         #img1={"filename":"Topic_5_history.html", "height":"5.25in", "width":"10in", "caption":"Example topic when processing only the history section of discharge notes for both females and males. This topic is related to cancer, indicated by top weighted words 'cancer', 'lung' 'cell', 'mass', 'metastatic' and 'carcinoma'. For each of these words in this topic, total word count and word weight is projected."},
-        img1={"filename":"Topic_9_male2.html", "height":"5.5in", "width":"10in", "caption":"LDA example when processing the history section of male patient notes. This topic appears to be related to the heart indicated by top weighted words 'cardiac', 'coronary' and 'aortic'."},
-        img2={"filename":"SA_History_dis.html", "height":"5.5in", "width":"10in", "caption":"Frequency of LDA dominant topics and weighted topics found within the history section of both male and female suicide attempt patient notes. Dominant topic means only the highest scoring probability for each note is recorded. Topic weightage means that all probabilities for notes are accumulative."},
+        img1={"filename":"Topic_9_male2.html", "height":"5.25in", "width":"10in", "caption":"LDA example when processing the history section of male patient notes. This topic appears to be related to the heart indicated by top weighted words 'cardiac', 'coronary' and 'aortic'. All topic concepts are assumptions based on LDA output, word weight and frequency."},
+        img2={"filename":"SA_History_dis.html", "height":"5.25in", "width":"10in", "caption":"Frequency of LDA dominant topics and weighted topics found within the history section of both male and female suicide attempt patient notes. Dominant topic means only the highest scoring probability for each note is recorded. Topic weightage means that all probabilities for notes are accumulative. This model was trained to output 20 potential topics."},
         pyLDA={"filename":"full_lda_html.html", "height":"7.5in", "width":"12in", "caption": "Figure 3 LDA topics and their corresponding word frequency and weight. Multidmensional Scaling (MDS) gives an estimate of similarity between the topics. Relevance metric can be adjusted to effect saliency and relevance."})
     my_poster.add_section(title="LDA Findings", text="The LDA models trained on the history section of notes were able to pull out more specific social determinants that were unrelated to their ICU stay, compared to the LDA trained on all available notes. These include histories involving alcoholism, hypertension, heart disease, cancer and more. To narrow this down even further, female patients had histories of hypertension, drug abuse and depression, whilst male patients had histories of coronary artery disease, alcohol abuse, cirrhosis and hopelessness.")
     my_poster.next_column()
@@ -72,7 +72,7 @@ def create_poster():
     my_poster.add_section(title="Clever Output",
         img4={"filename":"clever_output.png", "height":"4.50in", "width":"10in", "caption":"Example output of CLEVER that shows positive indication of homelessness found within the free text. Personal Identification Information has been removed."})
     my_poster.add_section(title="Conclusion", text="NLP allows for the extraction of concepts and topics that are hidden within EHR free text. These LDA models were successful at identifying topics related to diagnosis, procedures, routines and more. They also identifed socio-economic determinants like drug abuse. As a follow-up, CLEVER successfully identified the unique patients with these determinants. These results can then be used to identify potentially missing structured data and those who are at higher risk of suicide. Current development and refining is ongoing.")
-    my_poster.add_section(title="Acknowledgments", text="This work was supported in part by the U.S. Department of Energy, Computational Research Division (CRD) of the Berkeley National Lab, and VA Million Veteran Program (MVP). Thank you again to Dr. Liu, Dr. Crivelli, Rafael, and Shirley. Thank you to Dr. Suzanne Tamang at Oak Ridge National Lab for sharing her clinical concept extractor, CLEVER.") 
+    my_poster.add_section(title="Acknowledgments", text="This work was supported in part by the U.S. Department of Energy, Computational Research Division (CRD) of the Berkeley National Lab, and VA Million Veteran Program (MVP). Thank you to Sustainable Horizons Institute and Sustainable Research Pathways for making this conference attendence possible. Thank you to Dr. Suzanne Tamang at Oak Ridge National Lab for sharing her clinical concept extractor, CLEVER.") 
     my_poster.next_column()
 
     return my_poster.compile()
