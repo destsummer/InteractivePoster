@@ -25,7 +25,7 @@ def PosterColumn(sections):
     return layout
 
 #--
-def Header(title, authors, institutions, logo=None, banner_color):
+def Header(title, authors, institutions, logo, banner_color):
     layout = dbc.Card(
     dbc.Row(
     [dbc.Col(html.Img(src="hood.png", style={'height':'4in', "width":"4in"}),style={"display":"flex","justify-content":"flex-end","padding-left":"80px"},width=1.5),
@@ -43,7 +43,7 @@ def Header(title, authors, institutions, logo=None, banner_color):
     return layout
 
 #-
-def Poster(title, authors, institutions, logo=None, columns, bg_color, banner_color):
+def Poster(title, authors, institutions, logo, columns, bg_color, banner_color):
     layout = html.Div(
     dbc.Col([
         dbc.Row(Header(title, authors, institutions, logo, banner_color), style={"padding":"15px"}),
@@ -57,7 +57,7 @@ def Poster(title, authors, institutions, logo=None, columns, bg_color, banner_co
 class iPoster:
 
     #--
-    def __init__(self, title, authors_dict, logo=None, banner_color="#0033cc", text_color="white"):
+    def __init__(self, title, authors_dict, logo, banner_color="#0033cc", text_color="white"):
         self.poster_title = title
         self.authors = authors_dict
         self.logo= logo
