@@ -68,7 +68,7 @@ def create_poster():
     # Visualize the topics and words
     my_poster.add_section(title="Current Work",
         text="CLEVER is an adaptive clinical concept extractor. This method does not require any machine learning training and is broken down into the three steps seen below. Modification of the lexicon can include any and all desired clinical concepts for precise output.",
-        img3={"filename":"clever_flow.png", "height":"7in", "width":"10in", "caption":"Flowchart of CLEVER."}) 
+        img3={"filename":"clever_flow.png", "height":"6.75in", "width":"10in", "caption":"Flowchart of CLEVER."}) 
     my_poster.add_section(title="Clever Output",
         img4={"filename":"clever_output.png", "height":"4.50in", "width":"10in", "caption":"Example output of CLEVER that shows positive indication of homelessness found within the free text. Personal Identification Information has been removed."})
     my_poster.add_section(title="Conclusion", text="NLP allows for the extraction of concepts and topics that are hidden within EHR free text. These LDA models were successful at identifying topics related to diagnosis, procedures, routines and more. They also identifed socio-economic determinants like drug abuse. As a follow-up, CLEVER successfully identified the unique patients with these determinants. These results can then be used to identify potentially missing structured data and those who are at higher risk of suicide. Current development and refining is ongoing.")
