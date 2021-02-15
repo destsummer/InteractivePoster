@@ -38,7 +38,7 @@ def create_poster():
                                       "Xiange Wang" : ["Lawrence Berkeley National Laboratory"],
                                       "Xinlian Liu" : ["Hood College", "Lawrence Berkeley National Laboratory"],
                                       "Silvia Crivelli" : ["Lawrence Berkeley National Laboratory"]},
-                        #logo = "hood.png", # Home institution logo
+                        logo = "SHI.png", # Home institution logo
                         banner_color=colors.DOE_GREEN, # Color of banner header; colors has preset colors
                         text_color=colors.WHITE)
 
