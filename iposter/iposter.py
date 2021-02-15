@@ -112,11 +112,11 @@ class iPoster:
             self.figure_counter += 1
             childs.append(html.P("Figure {}. ".format(self.figure_counter) + pyLDA["caption"], style={"font-family": "Georgia", "font-size":"24px", "font-weight":"normal", "text-align":"center"}))
         if img3:
-            childs.append(html.Iframe(src=img3["filename"], style={"height":img3["height"], "width":img3["width"], "margin-left": "auto", "margin-right": "auto", "display": "block"}))
+            childs.append(html.Img(src=img3["filename"], style={"height":img3["height"], "width":img3["width"], "margin-left": "auto", "margin-right": "auto", "display": "block"}))
             self.figure_counter += 1
             childs.append(html.P("Figure {}. ".format(self.figure_counter) + img3["caption"], style={"font-family": "Georgia", "font-size":"24px", "font-weight":"normal", "text-align":"center"}))
         if img4:
-            childs.append(html.Iframe(src=img4["filename"], style={"height":img4["height"], "width":img4["width"], "margin-left": "auto", "margin-right": "auto", "display": "block"}))
+            childs.append(html.Img(src=img4["filename"], style={"height":img4["height"], "width":img4["width"], "margin-left": "auto", "margin-right": "auto", "display": "block"}))
             self.figure_counter += 1
             childs.append(html.P("Figure {}. ".format(self.figure_counter) + img4["caption"], style={"font-family": "Georgia", "font-size":"24px", "font-weight":"normal", "text-align":"center"}))
         if plot:
